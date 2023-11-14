@@ -1,0 +1,93 @@
+title: About the game
+type: jig.default
+
+actions:
+  - children:
+      - type: action.go-to
+        options:
+          title: Learn the rules
+          linkTo: rules
+
+header:
+  type: component.jig-header
+  options:
+    height: medium
+    children:
+      type: component.image
+      options:
+        source:
+          uri: https://www.illumination.com/wp-content/uploads/2019/10/grinch-1.png
+
+# datasources:
+#   mydata: 
+
+children:
+  - type: component.entity
+    options:
+      children:
+        - type: component.entity-field
+          options:
+            label: ' '
+            value: Welcome to a game of deception, social dedication (or deduction), and holiday joy! It’s based on Werewolf and plays out in North Pole.  
+            isMultiline: true
+            
+        - type: component.entity-field
+          options:
+            label: ' '
+            value: The Grinches are trying to ruin Christmas cheer by eliminating Santa’s army and therefore preventing everyone from receiving Christmas gifts. Other parties involved are Scrooge and Santa who try to prevent their evil plans and then the Elves. 
+            isMultiline: true
+            
+        - type: component.entity-field
+          options:
+            label: ' '
+            value: Everyone’s roles are top secret, and no one knows who’s who. 
+            isMultiline: true
+            
+        - type: component.entity-field
+          options:
+            label: ' '
+            value: That’s what the game is about – protecting your identity to make sure your side, good or bad is left standing at the end of the game.   
+            isMultiline: true
+        
+widgets:
+  "4x2": 
+    type: widget.group
+    options:
+      children:
+        - type: widget.image
+          options:
+            source:
+              uri: https://www.illumination.com/wp-content/uploads/2019/10/grinch-1.png
+              
+            top: 
+              type: component.titles
+              options:
+                title: Welcome in the game
+                subtitle: Grinches & Grudges 
+                align: center
+        - type: widget.value
+          options:
+            top: 
+              type: component.titles
+              options:
+                title: Welcome in the game
+                
+            bottom: 
+              type: component.titles
+              options:
+                title: learn the rules
+                icon: arrow-right
+                iconColor: color2
+                align: left
+            value: No active players
+        # - type: widget.list
+        #   when: =@ctx.datasources.users != null
+        #   options:
+        #     data: =@ctx.datasources.users
+        #     item: 
+        #       type: component.list-item
+        #       options:
+        #         title: jfhjsk
+                
+          
+            

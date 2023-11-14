@@ -1,0 +1,89 @@
+title: Rules
+type: jig.default
+
+header:
+  type: component.jig-header
+  options:
+    height: medium
+    children:
+      type: component.image
+      options:
+        source:
+          uri: https://ichef.bbci.co.uk/images/ic/448xn/p085mwhc.png
+
+children:
+  - type: component.entity
+    options:
+      children:
+        - type: component.entity-field
+          options:
+            label: ' '
+            value: 🎄 Roles will be assigned to all the players. 
+            isMultiline: true
+        - type: component.entity-field
+          options:
+            label: ' '
+            value: 🎄 All players will be notified when night falls. 
+            isMultiline: true
+        - type: component.entity-field
+          options:
+            label: ' '
+            value: 🎄 Wake up the Grinches and find out who they want to kill.  
+            isMultiline: true
+        - type: component.entity-field
+          options:
+            label: ' '
+            value: 🎄 Wake up Santa and find out who they think the Grinches are (only one vote per round). 
+            isMultiline: true
+        - type: component.entity-field
+          options:
+            label: ' '
+            value: 🎄 Wake up Scrooge and find out who they want to save. 
+            isMultiline: true
+        - type: component.entity-field
+          options:
+            label: ' '
+            value: 🎄 Wake up all the players when the day arrives. 
+            isMultiline: true
+        - type: component.entity-field
+          options:
+            label: ' '
+            value: 🎄 Players are notified who have been eliminated. 
+            isMultiline: true
+        - type: component.entity-field
+          options:
+            label: ' '
+            value: 🎄 Players debate who the Grinches are. 
+            isMultiline: true
+        - type: component.entity-field
+          options:
+            label: ' '
+            value: 🎄 Elves vote for who they want to kick out (who they think the Grinches are). 
+            isMultiline: true
+        - type: component.entity-field
+          options:
+            label: ' '
+            value: 🎄 Depending on the vote, notify the voted-out player.  
+            isMultiline: true
+        - type: component.entity-field
+          options:
+            label: ' '
+            value: 🎄 If all the Elves are eliminated, the Grinches win.  
+            isMultiline: true
+        - type: component.entity-field
+          options:
+            label: ' '
+            value: 🎄 If all the Grinches are eliminated, the Elves win. 
+            isMultiline: true
+        - type: component.entity-field
+          options:
+            label: ' '
+            value: 🎄 The round continues until one side wins.  
+            isMultiline: true
+        - type: component.entity-field
+          options:
+            label: ' '
+            value: 🎄 No cheating! Players cannot open their eyes until instructed to do so by the moderator.  
+            isMultiline: true
+            
+       
