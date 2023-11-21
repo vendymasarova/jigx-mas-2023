@@ -1,4 +1,4 @@
-title: ' '
+title: Scrooge
 type: jig.default
 
 children:
@@ -28,8 +28,8 @@ widgets:
       source:
         uri: https://static01.nyt.com/images/2022/12/01/multimedia/christmascarol1/christmascarol1-1-f538-superJumbo.jpg
       isContentOverlaid: true
-      bottom: 
-        type: component.titles
-        options:
-          title: Scrooge
-          align: center
+      # bottom: 
+      #   type: component.titles
+      #   options:
+      #     title: Scrooge
+      #     align: center

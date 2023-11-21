@@ -1,0 +1,28 @@
+title: Name
+type: jig.default
+
+children:
+  - type: component.widgets
+    options:
+      children:
+        - size: 4x2 # choose size of the widget on the home hub
+          jigId: myfirstjig
+  - type: component.custom-component
+    componentId: join-btn
+    inputs:
+      title: Join
+      icon: plus
+      goto: false
+  - type: component.widgets
+    options:
+      children:
+        - size: 2x2 # choose size of the widget on the home hub
+          jigId: grinches
+        - size: 2x2 # choose size of the widget on the home hub
+          jigId: moderator
+        - size: 2x2 # choose size of the widget on the home hub
+          jigId: santa
+        - size: 2x2 # choose size of the widget on the home hub
+          jigId: scrooge
+        - size: 2x2 # choose size of the widget on the home hub
+          jigId: elves

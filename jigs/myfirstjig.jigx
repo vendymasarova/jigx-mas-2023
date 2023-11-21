@@ -70,15 +70,15 @@ widgets:
             top: 
               type: component.titles
               options:
-                title: Welcome in the game
+                title: Active players
                 
             bottom: 
               type: component.titles
               options:
-                title: learn the rules
                 icon: arrow-right
+                subtitle: learn the rules
                 iconColor: color2
-                align: left
+                align: right
             value: No active players
         # - type: widget.list
         #   when: =@ctx.datasources.users != null

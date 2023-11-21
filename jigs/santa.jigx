@@ -1,4 +1,4 @@
-title: ' '
+title: Santa
 type: jig.default
 
 children:
@@ -28,8 +28,8 @@ widgets:
       source:
         uri: https://i.pinimg.com/originals/b1/75/ee/b175eefec13e6195382074aa2571f80f.png
       isContentOverlaid: true
-      bottom: 
-        type: component.titles
-        options:
-          title: Santa
-          align: center
+      # bottom: 
+      #   type: component.titles
+      #   options:
+      #     title: Santa
+      #     align: center

@@ -28,8 +28,8 @@ widgets:
       source:
         uri: https://www.amestrib.com/gcdn/authoring/2018/11/16/NTCT/ghows-IA-5d2573be-2fab-4271-99c4-3564e309be12-4577f1fb.jpeg?width=1200&disable=upscale&format=pjpg&auto=webp
       isContentOverlaid: true
-      bottom: 
-        type: component.titles
-        options:
-          title: The Grinches
-          align: center
+      # bottom: 
+      #   type: component.titles
+      #   options:
+      #     title: The Grinches
+      #     align: center

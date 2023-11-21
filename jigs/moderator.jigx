@@ -28,8 +28,8 @@ widgets:
       source:
         uri: https://i.pinimg.com/736x/22/ca/f8/22caf81feb2ad3569aa298f427e464f0.jpg
       isContentOverlaid: true
-      bottom: 
-        type: component.titles
-        options:
-          title: The Moderator 
-          align: center
+      # bottom: 
+      #   type: component.titles
+      #   options:
+      #     title: The Moderator 
+      #     align: center

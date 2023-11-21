@@ -28,8 +28,8 @@ widgets:
       source:
         uri: https://img.freepik.com/free-vector/elf-cartoon-character-fantasy-land_1308-127746.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699833600&semt=ais
       isContentOverlaid: false
-      bottom: 
-        type: component.titles
-        options:
-          title: Elves
-          align: center
+      # bottom: 
+      #   type: component.titles
+      #   options:
+      #     title: Elves
+      #     align: center

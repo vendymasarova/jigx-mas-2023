@@ -1,6 +1,11 @@
 name: jigx-mas-2023
 title: grinches-and-grudges
 category: business
+
+home:
+  - instanceId: home
+    jigId: custom-home
+    
 widgets:
   - size: 4x2 # choose size of the widget on the home hub
     jigId: myfirstjig
@@ -18,3 +23,4 @@ widgets:
 assets:
   icons:
     - arrow-right # auto-generated
+    - plus # auto-generated
