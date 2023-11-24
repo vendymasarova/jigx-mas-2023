@@ -1,0 +1,35 @@
+title: Eliminated players
+description: Players who are no longer in the game. See their roles!
+type: jig.list
+icon: contact
+placeholders:
+  - title: No eliminated users yet. Try harder!
+    when: =$count(@ctx.datasources.eliminatedUsers) = 0
+
+
+datasources:
+  eliminatedUsers:
+    type: datasource.sqlite
+    options:
+      provider: DATA_PROVIDER_DYNAMIC
+  
+      entities:
+        - default/users
+
+      query: 
+        SELECT 
+        id, 
+        '$.username', 
+        '$.role',
+        '$.email',
+        '$.avatar',
+        '$.isActive'
+        FROM [default/users]
+        WHERE '$.isActive' = 0
+        
+data: =@ctx.datasources.eliminatedUsers
+item: 
+  type: component.custom-component
+  componentId: players-custom
+  inputs:
+    users: =@ctx.current.item 

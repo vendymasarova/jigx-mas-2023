@@ -8,7 +8,7 @@ home:
     
 widgets:
   - size: 4x2 # choose size of the widget on the home hub
-    jigId: myfirstjig
+    jigId: welcome
   - size: 2x2 # choose size of the widget on the home hub
     jigId: grinches
   - size: 2x2 # choose size of the widget on the home hub
@@ -23,4 +23,5 @@ widgets:
 assets:
   icons:
     - arrow-right # auto-generated
+    - contact # auto-generated
     - plus # auto-generated

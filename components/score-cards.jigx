@@ -1,0 +1,62 @@
+type: component.default
+children:
+  - type: component.view
+    options:
+      style:
+        flex: 
+          direction: row
+          grow: 1
+          basis: 1
+        gap: medium
+        margin:
+          right: medium
+      children:
+        - type: component.card
+          options:
+            color: positive
+            onPress: 
+              type: action.go-to
+              options:
+                linkTo: active-players
+            children:
+              - type: component.view
+                options:
+                  style:
+                    flex: 
+                      basis: 1
+                    alignItems: center
+                    justifyContent: center
+                  children:
+                    - type: component.text
+                      options:
+                        value: =$count(@ctx.inputs.activeUsers)
+                        size: medium
+                    - type: component.text
+                      options:
+                        value: Active users
+                        
+        - type: component.card
+          options:
+            onPress: 
+              type: action.go-to
+              options:
+                linkTo: eliminated-players
+            color: negative
+            children:
+              - type: component.view
+                options:
+                  style:
+                    flex: 
+                      basis: 1
+                    alignItems: center
+                    justifyContent: center
+                  children:
+                    - type: component.text
+                      options:
+                        value: =$count(@ctx.inputs.eliminatedUsers)  
+                        size: medium
+                    - type: component.text
+                      options:
+                        value: Eliminated users  
+                        
+                        

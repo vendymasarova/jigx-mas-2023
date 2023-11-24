@@ -1,0 +1,15 @@
+type: datasource.sqlite
+options:
+  provider: DATA_PROVIDER_DYNAMIC
+
+  entities:
+    - default/users
+
+  query: 
+    SELECT 
+    id, 
+    '$.username', 
+    '$.role',
+    '$.email',
+    '$.avatar'
+    FROM [default/users]

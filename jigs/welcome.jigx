@@ -70,16 +70,15 @@ widgets:
             top: 
               type: component.titles
               options:
-                title: Active players
-                
+                title: =$count(@ctx.datasources.users) >= 1 ? 'All players':'The game has not started yet' 
             bottom: 
               type: component.titles
               options:
                 icon: arrow-right
-                subtitle: learn the rules
+                subtitle: About the game
                 iconColor: color2
                 align: right
-            value: No active players
+            value: =$count(@ctx.datasources.users)
         # - type: widget.list
         #   when: =@ctx.datasources.users != null
         #   options:

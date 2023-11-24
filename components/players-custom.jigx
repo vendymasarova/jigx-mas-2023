@@ -1,0 +1,63 @@
+type: component.default
+children:
+  - type: component.view
+    options:
+      style:
+        padding: 
+          vertical: minimal
+          horizontal: small
+      children:
+        - type: component.card
+          options:
+            color: color14
+            children:
+              - type: component.view
+                options:
+                  style:
+                    radius: small
+                    flex: 
+                      direction: row
+                      grow: 1
+                      shrink: 1
+                      basis: 1
+                    alignItems: center
+                    justifyContent: space-between
+                  children:
+                    - type: component.view
+                      options:
+                        style:
+                          flex:
+                            direction: row
+                          alignItems: center
+                          gap: small
+                            # grow: 1
+                        children:
+                          - type: component.avatar
+                            options:
+                              title: =@ctx.inputs.users.username
+                              uri: =@ctx.inputs.users.avatar
+                              size: regular
+                          - type: component.text
+                            options:
+                              value: =@ctx.inputs.users.username
+                    - type: component.button
+                      when: =@ctx.user.email = 'chanelle@jigx.com' and @ctx.inputs.users.isActive = 1 ? true:false
+                      options:
+                        title: Eliminate
+                        type: secondary
+                        isCompact: true
+                        onPress: 
+                          type: action.execute-entity
+                          options:
+                            provider: DATA_PROVIDER_DYNAMIC
+                            entity: default/users
+                            method: update
+                            goBack: stay
+                            data:
+                              id: =@ctx.inputs.users.id
+                              isActive: 0
+                    - type: component.text
+                      when: =@ctx.inputs.users.isActive = 0
+                      options:
+                        value: =@ctx.inputs.users.role
+                        size: medium

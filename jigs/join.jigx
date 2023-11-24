@@ -1,0 +1,88 @@
+title: Set your profile
+description: Make sure nobody can see your screen.
+type: jig.default
+
+header:
+  type: component.jig-header
+  options:
+    height: medium
+    children:
+      type: component.image
+      options:
+        source:
+          uri: https://www.illumination.com/wp-content/uploads/2019/10/grinch-1.png
+          
+actions:
+  - children:
+      - type: action.submit-form
+        options:
+          formId: join-form
+          provider: DATA_PROVIDER_DYNAMIC
+          entity: default/users
+          method: save
+          goBack: home
+          title: Join the game
+          onSuccess: 
+            title: You joined successfully
+            description: The game can begin
+          
+datasources:
+  roles: 
+    type: datasource.static
+    options:
+      data:
+        - id: 1
+          name: Elv
+          image: https://img.freepik.com/free-vector/elf-cartoon-character-fantasy-land_1308-127746.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699833600&semt=ais
+        - id: 2
+          name: Grinch
+          image: https://www.amestrib.com/gcdn/authoring/2018/11/16/NTCT/ghows-IA-5d2573be-2fab-4271-99c4-3564e309be12-4577f1fb.jpeg?width=1200&disable=upscale&format=pjpg&auto=webp
+        - id: 3
+          name: Santa
+          image: https://i.pinimg.com/originals/b1/75/ee/b175eefec13e6195382074aa2571f80f.png
+        - id: 4
+          name: Scrooge
+          image: https://static01.nyt.com/images/2022/12/01/multimedia/christmascarol1/christmascarol1-1-f538-superJumbo.jpg
+
+children:
+  - type: component.form
+    instanceId: join-form
+    options:
+      children:
+        - type: component.text-field
+          instanceId: username
+          options:
+            label: Nickname
+        - type: component.dropdown
+          instanceId: role
+          options:
+            label: Your role
+            data: =@ctx.datasources.roles
+            item:
+              type: component.dropdown-item
+              options:
+                title: =@ctx.current.item.name
+                value: =@ctx.current.item.name
+                leftElement: 
+                  element: image
+                  text: ''
+                  uri: =@ctx.current.item.image
+        - type: component.text-field
+          instanceId: email
+          options:
+            isHidden: true
+            isRequired: false
+            label: email
+            initialValue: =@ctx.user.email
+        - type: component.media-field
+          instanceId: avatar
+          options:
+            label: Make a selfie!
+            mediaType: image
+        - type: component.number-field
+          instanceId: isActive
+          options:
+            isHidden: true
+            isRequired: false
+            label: isActive
+            initialValue: 1

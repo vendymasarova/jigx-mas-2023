@@ -1,12 +1,13 @@
 type: component.default
 children:
   - type: component.card
+    when: =@ctx.datasources.users[email = @ctx.user.email] ? false:true
     options:
       color: color2
       onPress: 
         type: action.go-to
         options:
-          linkTo: =@ctx.inputs.goTo
+          linkTo: =@ctx.inputs.linkTo
       children:
         - type: component.view
           options:

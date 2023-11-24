@@ -1,0 +1,47 @@
+title: Name
+description: Description of your Jig
+type: jig.list
+icon: contact
+
+header:
+  type: component.jig-header
+  options:
+    height: medium
+    children:
+      type: component.image
+      options:
+        source:
+          uri: https://builder.jigx.com/assets/images/header.jpg
+
+datasources:
+  users: 
+    type: datasource.sqlite
+    options:
+      provider: DATA_PROVIDER_DYNAMIC
+  
+      entities:
+        - default/users
+
+      query: 
+        SELECT 
+        id, 
+        '$.username', 
+        '$.role',
+        '$.email',
+        '$.avatar',
+        '$.isActive'
+        FROM [default/users]
+        # WHERE '$.isActive' = 1
+
+
+data: =@ctx.datasources.users
+item:
+  type: component.list-item
+  options:
+    title: =@ctx.current.item.username
+    subtitle: =@ctx.current.item.isActive = 0 ? @ctx.current.item.role:''
+    leftElement:  
+      element: avatar
+      text: =@ctx.current.item.username
+      uri: =@ctx.current.item.avatar
+    

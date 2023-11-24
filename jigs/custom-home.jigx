@@ -1,18 +1,63 @@
 title: Name
 type: jig.default
 
+datasources:
+  activeUsers:
+    type: datasource.sqlite
+    options:
+      provider: DATA_PROVIDER_DYNAMIC
+  
+      entities:
+        - default/users
+
+      query: 
+        SELECT 
+        id, 
+        '$.username', 
+        '$.role',
+        '$.email',
+        '$.avatar',
+        '$.isActive'
+        FROM [default/users]
+        WHERE '$.isActive' = 1
+        
+  eliminatedUsers:
+    type: datasource.sqlite
+    options:
+      provider: DATA_PROVIDER_DYNAMIC
+  
+      entities:
+        - default/users
+
+      query: 
+        SELECT 
+        id, 
+        '$.username', 
+        '$.role',
+        '$.email',
+        '$.avatar',
+        '$.isActive'
+        FROM [default/users]
+        WHERE '$.isActive' = 0
+
 children:
   - type: component.widgets
     options:
       children:
         - size: 4x2 # choose size of the widget on the home hub
-          jigId: myfirstjig
+          jigId: welcome
+  - type: component.custom-component
+    when: =$count(@ctx.datasources.users) >=1
+    componentId: score-cards
+    inputs: 
+      activeUsers: =@ctx.datasources.activeUsers
+      eliminatedUsers: =@ctx.datasources.eliminatedUsers
   - type: component.custom-component
     componentId: join-btn
     inputs:
       title: Join
       icon: plus
-      goto: false
+      linkTo: join
   - type: component.widgets
     options:
       children:

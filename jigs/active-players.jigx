@@ -1,0 +1,34 @@
+title: Active users
+description: Who can be who??
+type: jig.list
+icon: contact
+placeholders:
+  - title: No more active users. Game over!
+    when: =$count(@ctx.datasources.activeUsers) = 0
+
+datasources:
+  activeUsers:
+    type: datasource.sqlite
+    options:
+      provider: DATA_PROVIDER_DYNAMIC
+  
+      entities:
+        - default/users
+
+      query: 
+        SELECT 
+        id, 
+        '$.username', 
+        '$.role',
+        '$.email',
+        '$.avatar',
+        '$.isActive'
+        FROM [default/users]
+        WHERE '$.isActive' = 1
+        
+data: =@ctx.datasources.activeUsers
+item: 
+  type: component.custom-component
+  componentId: players-custom
+  inputs:
+    users: =@ctx.current.item 
