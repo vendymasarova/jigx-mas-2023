@@ -8,19 +8,13 @@ children:
         - type: component.entity-field
           options:
             label: ' '
-            value: The Grinches are the game’s villains and main antagonists. Their only job is to stalk the Elves at night and eliminate them without getting caught. This role probably has the most power in the game. Each night, the moderator wakes the Grinches up and asks them who they want to eat. 
+            value: Scrooge is on Santa and the Elves’ side and tries to keep them save. The moderator wakes Scrooge up each night after the Grinches and Santa. The moderator will ask Scrooge who they want to save. Scrooge will not know the identities of Santa nor of the Grinches’ victims. If Scrooge chooses the Grinches’ intended prey, then that Elf survives.  
             isMultiline: true
         - type: component.entity-field
           options:
             label: ' '
-            value: Of course, the Grinches needs to act as sneakily and stealthily as possible. This is where strategy comes into play. Your goal is to deflect or deter Elves’ suspicions. Furthermore, during daytime deliberation, try to make the Elves believe you are one of them
+            value: Scrooge is extra helpful if they can figure out the identity of Santa. Once Scrooge knows who the Grinch(es) are, they can help end the game. If Scrooge can figure out who Santa is, then they can keep Santa alive. 
             isMultiline: true
-        - type: component.entity-field
-          options:
-            label: ' '
-            value: For the best chance at surviving, the werewolf needs to figure out the identities of the seer and medic. The seer, in particular, is your biggest threat. Once the seer figures you out, their only goal is to turn all the villagers against you. /n/ The amount of Grinches depend on the amount of players.
-            isMultiline: true
-
 widgets:
   "2x2": 
     type: widget.image

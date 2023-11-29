@@ -8,17 +8,22 @@ children:
         - type: component.entity-field
           options:
             label: ' '
-            value: The Grinches are the game’s villains and main antagonists. Their only job is to stalk the Elves at night and eliminate them without getting caught. This role probably has the most power in the game. Each night, the moderator wakes the Grinches up and asks them who they want to eat. 
+            value: Santa is completely anti-grinch. This character is attempting to catch the Grinches and save the villagers. Santa has the chance to discover the Grinches, and then try to persuade other players. 
             isMultiline: true
         - type: component.entity-field
           options:
             label: ' '
-            value: Of course, the Grinches needs to act as sneakily and stealthily as possible. This is where strategy comes into play. Your goal is to deflect or deter Elves’ suspicions. Furthermore, during daytime deliberation, try to make the Elves believe you are one of them
+            value: Santa gets the night to guess who the Grinches are. Once you find out the truth, you are indispensable to the Elves. However, this fact makes you very dangerous to the Grinches, who will likely try to eliminate you as early as possible. For this reason, Santa must keep their identity hidden from the Elves and Grinches 
             isMultiline: true
         - type: component.entity-field
           options:
             label: ' '
-            value: For the best chance at surviving, the werewolf needs to figure out the identities of the seer and medic. The seer, in particular, is your biggest threat. Once the seer figures you out, their only goal is to turn all the villagers against you. /n/ The amount of Grinches depend on the amount of players.
+            value: To stay alive longer in the game and keep the Grinches from getting suspicious, try to remain neutral in discussions. If you are always trying to get the Elves to vote for the Grinches and they refuse, then you will likely end up dead very soon.  
+            isMultiline: true
+        - type: component.entity-field
+          options:
+            label: ' '
+            value: Reading the room during the discussion can help you to stay alive. For instance, if another player mentions the Grinches, then you have a chance to guide the conversation without pointing fingers.   
             isMultiline: true
 
 widgets:
